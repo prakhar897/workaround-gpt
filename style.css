@@ -5,6 +5,10 @@ body {
     background-color: #F0F0F0;
 }
 
+.hidden{
+    display: none;
+}
+
 .workaround-button{  
     display: inline-block;
     outline: 0;
@@ -30,6 +34,31 @@ body {
 .workaround-button:active{
     box-shadow: inset 0px 3px 7px #3c4fe0;
     transform: translateY(2px);
+}
+
+.advanced-button{
+    
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0 12px;
+    line-height: 20px;
+    height: 30px;
+    max-height: 30px;
+    background: none;
+    font-weight: 700;
+    border: 0;
+    border-radius: 0;
+    color: #D92736;
+    transition-timing-function: ease-in-out;
+    transition-property: background;
+    transition-duration: 150ms;
+    box-shadow: none;
+}
+
+.advanced-button:hover {
+    background: #F7F9FD;
 }
 
 .support-us{

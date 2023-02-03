@@ -12,10 +12,10 @@ async function copyToTheClipboard(textToCopy){
   document.body.removeChild(el);
 }
 
-async function fetchPrompt(){
+async function fetchPromptJson(){
   const response = await fetch(promptUrl);
   const data = await response.json();
-  return data.text;
+  return data;
 }
 
 async function makeWorkaround(){ 
@@ -26,7 +26,26 @@ async function makeWorkaround(){
       
 };
 
+async function showChoiceDropdown(){
+  var promptSelection = document.getElementById('prompt-selection');
+  promptSelection.style.display = 'block';
+}
+
+async function createDropdownChoices(promptJson){
+  var prompts = document.getElementById('prompts');
+  for (var hackIndex in promptJson.hacks){
+    var hack = promptJson.hacks[hackIndex];
+    var tempHTML = `<option value="${hack.id}">${hack.text}</option>`;
+    prompts.append(tempHTML);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+  const promptJson = fetchPromptJson();
+  createDropdownChoices(promptJson);
   const workaroundButton = document.getElementById('workaround-button');
   workaroundButton.addEventListener('click', makeWorkaround);
+
+  const advancedButton = document.getElementById('advanced-button');
+  advancedButton.addEventListener('click', showChoiceDropdown);
 });
