@@ -18,8 +18,18 @@ async function fetchPromptJson(){
   return data;
 }
 
-async function makeWorkaround(){ 
-  const prompt = await fetchPrompt();
+async function makeWorkaround(promptJson){
+  var select = document.getElementById("prompts");
+  var selectedOption = select.options[select.selectedIndex];
+  var selectedValue = selectedOption.value; 
+  var prompt = "abc";
+  for (var hackIndex in promptJson.hacks){
+    var hack = promptJson.hacks[hackIndex];
+    if(hack.id == selectedValue){
+      prompt = hack.text;
+    }
+  }
+  
   copyToTheClipboard(prompt); 
   const clipboardElement = document.getElementById('clipboardElement');
   clipboardElement.innerHTML = "Workaround Copied To Clipboard";
@@ -35,17 +45,21 @@ async function createDropdownChoices(promptJson){
   var prompts = document.getElementById('prompts');
   for (var hackIndex in promptJson.hacks){
     var hack = promptJson.hacks[hackIndex];
-    var tempHTML = `<option value="${hack.id}">${hack.text}</option>`;
-    prompts.append(tempHTML);
+    var tempHTML = `<option value="${hack.id}">${hack.text.slice(0,30)}</option>`;
+    prompts.innerHTML += tempHTML;
   }
+
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  const promptJson = fetchPromptJson();
-  createDropdownChoices(promptJson);
-  const workaroundButton = document.getElementById('workaround-button');
-  workaroundButton.addEventListener('click', makeWorkaround);
+  fetchPromptJson().then( (promptJson) => {
+    createDropdownChoices(promptJson);
+    const workaroundButton = document.getElementById('workaround-button');
+    workaroundButton.addEventListener('click', () => { makeWorkaround(promptJson) });
 
-  const advancedButton = document.getElementById('advanced-button');
-  advancedButton.addEventListener('click', showChoiceDropdown);
+    const advancedButton = document.getElementById('advanced-button');
+    advancedButton.addEventListener('click', showChoiceDropdown);
+  });
+  
+  
 });
