@@ -14,12 +14,5 @@
     "icons":{
         "128":"logo_128.png"
     },
-    "content_scripts": [
-        {
-          "js": ["content_script.js"],
-          "matches": ["https://chat.openai.com/chat/*"],
-          "run_at": "document_start"
-        }
-    ],
     "permissions":["activeTab","scripting"]
 }
