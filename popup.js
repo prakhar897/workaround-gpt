@@ -36,11 +36,6 @@ async function makeWorkaround(promptJson){
       
 };
 
-async function showChoiceDropdown(){
-  var promptSelection = document.getElementById('prompt-selection');
-  promptSelection.style.display = 'block';
-}
-
 async function createDropdownChoices(promptJson){
   var prompts = document.getElementById('prompts');
   for (var hackIndex in promptJson.hacks){
@@ -56,9 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
     createDropdownChoices(promptJson);
     const workaroundButton = document.getElementById('workaround-button');
     workaroundButton.addEventListener('click', () => { makeWorkaround(promptJson) });
-
-    const advancedButton = document.getElementById('advanced-button');
-    advancedButton.addEventListener('click', showChoiceDropdown);
   });
   
   

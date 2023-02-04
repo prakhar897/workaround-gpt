@@ -1,6 +1,7 @@
 {
     "name": "ChatGPT Workaround",
-    "version":"0.0.1",
+    "description":"A tool that enables users to work around limitations imposed by ChatGPT",
+    "version":"1.0.0",
     "manifest_version":3,
     "action":{
         "default_title": "ChatGPT Workaround",

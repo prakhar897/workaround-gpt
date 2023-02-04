@@ -49,32 +49,6 @@ body {
     transform: translateY(2px);
 }
 
-.advanced-button{
-    
-    display: inline-block;
-    outline: none;
-    cursor: pointer;
-    font-size: 14px;
-    padding: 0 12px;
-    line-height: 20px;
-    height: 30px;
-    max-height: 30px;
-    background: none;
-    font-weight: 700;
-    border: 0;
-    border-radius: 0;
-    color: #D92736;
-    transition-timing-function: ease-in-out;
-    transition-property: background;
-    transition-duration: 150ms;
-    box-shadow: none;
-    margin-bottom: 10px;
-}
-
-.advanced-button:hover {
-    background: #F7F9FD;
-}
-
 .support-us{
    
     display: inline-block;
@@ -137,6 +111,7 @@ select {
     font-size: 14px;
     padding: 6px;
     width: 100%;
+    margin-bottom: 10px;
 }
 
 option {
