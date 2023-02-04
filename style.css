@@ -1,8 +1,21 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/OpenSans-Medium.ttf);
+}
+
 body {
     width: 250px; /* your desired width */
     position: relative;
     vertical-align:middle;
     background-color: #F0F0F0;
+    font-family: OpenSans;
+    box-shadow: rgba(0, 0, 0, 0.075) 0px 0.25px 0.5px 0px;
+    border-radius: 0.3px;
 }
 
 .hidden{
@@ -55,6 +68,7 @@ body {
     transition-property: background;
     transition-duration: 150ms;
     box-shadow: none;
+    margin-bottom: 10px;
 }
 
 .advanced-button:hover {
@@ -62,26 +76,38 @@ body {
 }
 
 .support-us{
+   
     display: inline-block;
     outline: 0;
-    border: none;
     cursor: pointer;
-    padding: 0 24px;
-    border-radius: 50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+    background: #FFD814;
+    border: 1px solid #FCD200;
+    font-size: 13px;
+    height: 31px;
+    padding: 0 11px;
+    text-align: center;
+    width: 100%;
     min-width: 200px;
-    height: 50px;
-    font-size: 18px;
-    background-color: #fd0;
     font-weight: 500;
-    color: #222;
+    color: #0F1111;
+}
+
+.support-us:hover{
+    background: #F7CA00;
+    border-color: #F2C200;
+    box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
 }
 
 .support-us>a {
     all: unset;
+    font-family: Montserrat;
 }
 
 h1 {
     text-align:center;
+    font-family: Montserrat;
 }
 
 

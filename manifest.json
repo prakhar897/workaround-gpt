@@ -13,6 +13,5 @@
     },
     "icons":{
         "128":"logo_128.png"
-    },
-    "permissions":["activeTab","scripting"]
+    }
 }
