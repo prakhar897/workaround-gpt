@@ -120,3 +120,14 @@ option {
     font-size: 14px;
     padding: 6px;
 }
+
+.support-us-img{
+    height: 60px;
+    width: 250px;
+    border-radius: 3%;
+}
+
+.ad-reasoning{
+    font-size: 9px;
+    margin-top: 0px;
+}
