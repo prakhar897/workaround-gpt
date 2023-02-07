@@ -54,6 +54,9 @@ async function makeAdBanner(adData){
 	adBannerImgElement.setAttribute("width",adData.width);
 	adBannerImgElement.setAttribute("src", adData.url);
 	adBannerImgElement.setAttribute("height", adData.height);
+
+	const adBannerElement = document.getElementById('ad-banner');
+	adBannerElement.setAttribute("href",adData.href);
 }
 
 document.addEventListener('DOMContentLoaded', function () {
