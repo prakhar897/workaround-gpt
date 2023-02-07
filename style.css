@@ -49,36 +49,6 @@ body {
     transform: translateY(2px);
 }
 
-.support-us{
-   
-    display: inline-block;
-    outline: 0;
-    cursor: pointer;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
-    background: #FFD814;
-    border: 1px solid #FCD200;
-    font-size: 13px;
-    height: 31px;
-    padding: 0 11px;
-    text-align: center;
-    width: 100%;
-    min-width: 200px;
-    font-weight: 500;
-    color: #0F1111;
-}
-
-.support-us:hover{
-    background: #F7CA00;
-    border-color: #F2C200;
-    box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
-}
-
-.support-us>a {
-    all: unset;
-    font-family: Montserrat;
-}
-
 h1 {
     text-align:center;
     font-family: Montserrat;
@@ -121,9 +91,7 @@ option {
     padding: 6px;
 }
 
-.support-us-img{
-    height: 60px;
-    width: 250px;
+.ad-banner-img{
     border-radius: 3%;
 }
 

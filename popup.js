@@ -1,4 +1,5 @@
 var promptUrl = 'https://raw.githubusercontent.com/prakhar897/workaround-gpt/main/prompt.json'
+var adDataUrl = 'https://raw.githubusercontent.com/prakhar897/workaround-gpt/main/adData.json'
 
 async function copyToTheClipboard(textToCopy) {
 	const el = document.createElement('textarea');
@@ -12,11 +13,13 @@ async function copyToTheClipboard(textToCopy) {
 	document.body.removeChild(el);
 }
 
-async function fetchPromptJson() {
-	const response = await fetch(promptUrl);
+async function fetchJson(url) {
+	const response = await fetch(url);
 	const data = await response.json();
 	return data;
 }
+
+
 
 async function makeWorkaround(promptJson) {
 	var select = document.getElementById("prompts");
@@ -46,11 +49,21 @@ async function createDropdownChoices(promptJson) {
 
 }
 
+async function makeAdBanner(adData){
+	const adBannerImgElement = document.getElementById('ad-banner-img');
+	adBannerImgElement.setAttribute("width",adData.width);
+	adBannerImgElement.setAttribute("src", adData.url);
+	adBannerImgElement.setAttribute("height", adData.height);
+}
+
 document.addEventListener('DOMContentLoaded', function () {
-	fetchPromptJson().then((promptJson) => {
-		createDropdownChoices(promptJson);
-		const workaroundButton = document.getElementById('workaround-button');
-		workaroundButton.addEventListener('click', () => { makeWorkaround(promptJson) });
+	fetchJson(promptUrl).then((promptJson) => {
+		fetchJson(adDataUrl).then( (adData) => {
+			createDropdownChoices(promptJson);
+			const workaroundButton = document.getElementById('workaround-button');
+			workaroundButton.addEventListener('click', () => { makeWorkaround(promptJson) });
+			makeAdBanner(adData);
+		})
 	});
 
 
