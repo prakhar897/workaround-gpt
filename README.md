@@ -9,15 +9,15 @@ It's important to note that WorkaroundGPT is an independent development and is n
 
 ## Screenshot
 
-<img width="1418" alt="image" src="a">
+<img width="1418" alt="image" src="https://raw.githubusercontent.com/prakhar897/workaround-gpt/main/images/ss1.png">
 
 ## You can select the available workarounds
 
-<img width="1418" alt="image" src="a">
+<img width="1418" alt="image" src="https://raw.githubusercontent.com/prakhar897/workaround-gpt/main/images/ss2.png">
 
 ## Add Your Feedback if an you want to add/remove a workaround
 
-<img width="1418" alt="image" src="a">
+<img width="1418" alt="image" src="https://raw.githubusercontent.com/prakhar897/workaround-gpt/main/images/ss3.jpg">
 
 ## Build from source
 
