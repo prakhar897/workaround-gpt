@@ -8,6 +8,7 @@ WorkaroundGPT is a tool that enables users to work around limitations imposed by
 It's important to note that WorkaroundGPT is an independent development and is not officially supported or connected with OpenAI.
 
 <br/>
+<br/>
 
 ## Screenshot
 
@@ -16,10 +17,18 @@ It's important to note that WorkaroundGPT is an independent development and is n
 <br/>
 <br/>
 
-## Choose from available workarounds and add/remove workarounds as they are fixed
+## Choose from available workarounds and 
 
-<img src = "https://raw.githubusercontent.com/prakhar897/workaround-gpt/main/images/ss2.png" width ="20%" /> <img src = "https://raw.githubusercontent.com/prakhar897/workaround-gpt/main/images/ss3.jpg" width ="20%" />
+<img src = "https://raw.githubusercontent.com/prakhar897/workaround-gpt/main/images/ss2.png" width ="40%" /> 
 
+<br/>
+<br/>
+
+## Add/remove workarounds as they are fixed
+
+<img src = "https://raw.githubusercontent.com/prakhar897/workaround-gpt/main/images/ss3.jpg" width ="40%" />
+
+<br/>
 <br/>
 
 ## Build from source
