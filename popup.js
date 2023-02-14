@@ -59,9 +59,15 @@ async function makeAdBanner(adData){
 	adBannerElement.setAttribute("href",adData.href);
 }
 
+async function setBodyWidth(bodyWidth){
+	const bodyElement = document.getElementsByName('body');
+	bodyElement.setAttribute("width",bodyWidth);
+}
+
 document.addEventListener('DOMContentLoaded', function () {
 	fetchJson(promptUrl).then((promptJson) => {
 		fetchJson(adDataUrl).then( (adData) => {
+			setBodyWidth(adData.bodyWidth);
 			createDropdownChoices(promptJson);
 			const workaroundButton = document.getElementById('workaround-button');
 			workaroundButton.addEventListener('click', () => { makeWorkaround(promptJson) });
