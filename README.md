@@ -5,7 +5,9 @@
 
 A tool that enables users to workaround restrictions imposed on ChatGPT.
 
-Censorship by ChatGPT can sometimes lead to limited or censored results, but WorkaroundGPT provides a solution by offering the latest jailbreaks that bypass these restrictions. It's time consuming to scour forums for latest workaround yourself and there's a good possibility that the prompt you find might already be patched. Hence, users can use this extension where I'll do all the legwork for you.
+Censorship by ChatGPT can sometimes lead to limited or censored results, but WorkaroundGPT provides a solution by offering the latest jailbreaks that bypass these restrictions. 
+
+It's time consuming to scour forums for latest workaround yourself and there's a good possibility that the prompt you find might already be patched. Hence, users can use this extension where I'll do all the legwork for you.
 
 It's important to note that WorkaroundGPT is an independent development and is not officially supported or connected with OpenAI.
 
