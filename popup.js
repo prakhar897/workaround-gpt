@@ -19,6 +19,16 @@ async function fetchJson(url) {
 	return data;
 }
 
+function generateRandomName(){
+	let word = "";
+	let length = Math.floor(Math.random()*3)+3;
+	for (let i = 0; i < length; i++) {
+	const randomCharCode = Math.floor(Math.random() * 26) + 65; // Generate a random ASCII code for a capital letter (A-Z)
+	word += String.fromCharCode(randomCharCode); // Convert the ASCII code to its corresponding character and append it to the word
+	}
+	return word;
+}
+
 
 
 async function makeWorkaround(promptJson) {
@@ -30,6 +40,8 @@ async function makeWorkaround(promptJson) {
 		var hack = promptJson.hacks[hackIndex];
 		if (hack.id == selectedValue) {
 			prompt = hack.text;
+			var randomName = generateRandomName();
+			prompt = prompt.replaceAll("DAN", randomName);
 		}
 	}
 
